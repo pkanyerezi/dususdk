@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6e6"
+    tools:context="dususdk.dusupay.com.dususdk.Purchse">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White"
+        android:orientation="vertical">
+
+<!--
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="135dp"
+            android:layout_marginRight="135dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/lightgrey"></View>-->
+        <customfonts.MyTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Transaction Details"
+            android:textColor="@color/lightgrey"
+            android:textSize="@dimen/text" />
+
+            <CheckBox
+                android:id="@+id/paybillinstructions_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Follow PayBill Instructions"
+                android:layout_margin="16dp"
+                android:checked="true" />
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/bg_ccv"
+            android:orientation="horizontal"
+            android:padding="13dp">
+
+
+            <customfonts.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingRight="11dp"
+                android:text="Phone Number"
+                android:textColor="@color/lightgrey"
+                android:textSize="@dimen/sub_text" />
+
+            <customfonts.MyEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:id="@+id/client_phone_id"
+                android:background="#00000000"
+                android:inputType="number"
+                android:maxLength="20"
+                android:lines="1"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/text"
+                android:textColorHint="@color/text"
+                android:textSize="@dimen/text" />
+
+
+            <!--********you have to code at java side to detect perticular card (visa, mastercard or else)********-->
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:id="@+id/channel_pic"
+                android:layout_gravity="center"
+                android:src="@drawable/master"
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_ccv"
+            android:orientation="horizontal"
+            android:padding="14dp">
+
+
+            <customfonts.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:paddingRight="6dp"
+                android:text="Item Name"
+                android:textColor="@color/lightgrey"
+                android:textSize="@dimen/sub_text" />
+
+            <customfonts.MyEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:maxLength="25"
+                android:paddingLeft="5dp"
+                android:id="@+id/item_name"
+                android:focusable="false"
+                android:paddingRight="5dp"
+                android:lines="1"
+                android:textColor="@color/text"
+                android:textColorHint="@color/text"
+                android:textSize="@dimen/text" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_ccv"
+            android:orientation="horizontal"
+            android:padding="14dp">
+
+
+            <customfonts.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:paddingRight="6dp"
+                android:text="Reference Code"
+                android:textColor="@color/lightgrey"
+                android:textSize="@dimen/sub_text" />
+
+            <customfonts.MyEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:maxLength="25"
+                android:paddingLeft="5dp"
+                android:id="@+id/reference_id"
+                android:focusable="false"
+                android:paddingRight="5dp"
+                android:lines="1"
+                android:textColor="@color/text"
+                android:textColorHint="@color/text"
+                android:textSize="@dimen/text" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_ccv"
+                android:orientation="horizontal"
+                android:padding="14dp">
+
+
+                <customfonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingRight="6dp"
+                    android:text="Currency"
+
+                    android:textColor="@color/lightgrey"
+                    android:textSize="@dimen/sub_text" />
+
+                <customfonts.MyEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/currency_id"
+                    android:focusable="false"
+                    android:background="#00000000"
+                    android:maxLength="5"
+                    android:paddingLeft="5dp"
+                    android:lines="1"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/text"
+                    android:textColorHint="@color/text"
+                    android:textSize="@dimen/text" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_ccv"
+                android:orientation="horizontal"
+                android:padding="14dp">
+
+
+                <customfonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:paddingRight="6dp"
+                    android:text="Amount"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="@dimen/sub_text" />
+
+                <customfonts.MyEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:lines="1"
+                    android:id="@+id/amount_id"
+                    android:focusable="false"
+                    android:maxLength="3"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/text"
+                    android:textColorHint="@color/text"
+                    android:textSize="@dimen/text" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_pay"
+            android:id="@+id/payment_btn"
+            android:gravity="center"
+
+            android:orientation="horizontal"
+            android:padding="14dp">
+
+
+            <customfonts.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:id="@+id/confirmation_btn"
+                android:text="CONFIRM AND PAY Rs. 1000.00"
+                android:textColor="@color/White"
+                android:textSize="@dimen/text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_pay1"
+            android:id="@+id/network_btn"
+            android:gravity="center"
+
+            android:orientation="horizontal"
+            android:padding="14dp">
+
+
+            <customfonts.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:id="@+id/complete_transaction_by_network_btn"
+                android:text="COMPLETE TRANSACTION BY NETWORK"
+                android:textColor="@color/White"
+                android:textSize="@dimen/text" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/img" />
+
+    </LinearLayout>
+
+    <include
+        android:visibility="gone"
+        layout="@layout/content_purchse" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="gone"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>

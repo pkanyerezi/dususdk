@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:padding="16dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="56dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+ 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:weightSum="3">
+ 
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_margin"
+            android:layout_weight="2"
+            android:text="Transaction Details"
+            android:textColor="#444"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+ 
+        <TextView
+            android:layout_width="0dp"
+            android:gravity="right"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/price_id"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:text=""></TextView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_ccv"
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+
+        <customfonts.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:paddingRight="6dp"
+            android:text="Network Transaction ID"
+            android:textColor="@color/lightgrey"
+            android:textSize="@dimen/sub_text" />
+
+
+        <customfonts.MyEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/network_transaction_id"
+            android:background="#00000000"
+            android:lines="1"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="@color/text"
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/text" />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_ccv"
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+
+        <customfonts.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:paddingRight="6dp"
+            android:text="Account/phone number"
+            android:textColor="@color/lightgrey"
+            android:textSize="@dimen/sub_text" />
+
+        <customfonts.MyEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:maxLength="25"
+            android:paddingLeft="5dp"
+            android:id="@+id/account_number"
+            android:hint="25670120XXXX"
+            android:focusable="false"
+            android:paddingRight="5dp"
+            android:lines="1"
+            android:textColor="@color/text"
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/text" />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_ccv"
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+
+        <customfonts.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:paddingRight="6dp"
+            android:text="Transaction ID"
+            android:textColor="@color/lightgrey"
+            android:textSize="@dimen/sub_text" />
+
+        <customfonts.MyEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:maxLength="45"
+            android:paddingLeft="5dp"
+
+            android:id="@+id/transaction_id"
+            android:focusable="false"
+            android:paddingRight="5dp"
+            android:lines="1"
+            android:textColor="@color/text"
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/text" />
+
+
+    </LinearLayout>
+
+ 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/confirm_network_btn"
+        android:background="#000"
+        android:foreground="?attr/selectableItemBackground"
+        android:text="COMPLETE TRANSACTION"
+        android:textColor="#fff" />
+ 
+</LinearLayout>

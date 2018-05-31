@@ -1,0 +1,39 @@
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.dususdk.library' // CREATE A GROUP ID FOR YOUR LIBRARY
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'aar'
+                groupId 'com.patrickkanyerezi.library' // CREATE A GROUP ID FOR YOUR LIBRARY
+                artifactId 'dususdk' // THE NAME OF YOUR MODULE
+
+                name 'DusuSdk' // YOUR LIBRARY NAME
+                description 'An android mobile sdk for dusupay.com.' // YOUR LIBRARY DESCRIPTION
+                url 'https://github.com/pkanyerezi/dususdk' // YOUR SITE
+
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'patrickkanyerezi' //YOUR ID
+                        name 'patrick kanyerezi' //YOUR NAME
+                        email 'patrickkanyerezi@gmail.com' //YOUR EMAIL
+                    }
+                }
+                scm {
+                    connection 'https://github.com/pkanyerezi/dususdk.git' // YOUR GIT REPO
+                    developerConnection 'https://github.com/pkanyerezi/dususdk.git' // YOUR GIT REPO
+                    url 'https://github.com/pkanyerezi/dususdk' // YOUR SITE
+
+                }
+            }
+        }
+    }
+}
