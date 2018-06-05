@@ -1,4 +1,4 @@
-package dususdk.dusupay.com.dususdk;
+package sdkdusupay.dusu.com.testsdkapp;
 
 import org.junit.Test;
 

@@ -1,1 +1,1 @@
-include ':app', ':dususdk'
+include ':sample', ':dususdk'

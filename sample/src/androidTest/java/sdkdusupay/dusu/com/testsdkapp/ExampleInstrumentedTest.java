@@ -1,4 +1,4 @@
-package dususdk.dusupay.com.dususdk;
+package sdkdusupay.dusu.com.testsdkapp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("dususdk.dusupay.com.dususdk.test", appContext.getPackageName());
+        assertEquals("sdkdusupay.dusu.com.testsdkapp", appContext.getPackageName());
     }
 }
