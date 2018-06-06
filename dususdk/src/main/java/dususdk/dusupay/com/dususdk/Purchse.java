@@ -218,6 +218,7 @@ public class Purchse extends AppCompatActivity {
             public void onClick(View view) {
                 sharedPref= getApplication().getApplicationContext().getSharedPreferences("myPref", Context.MODE_PRIVATE);
                 editor=sharedPref.edit();
+                editor.apply();
                 String result = sharedPref.getString("TransactionInfo","");
 
                 CompleteTransactionNetwork completeTransactionNetwork = new CompleteTransactionNetwork(Purchse.this,result);

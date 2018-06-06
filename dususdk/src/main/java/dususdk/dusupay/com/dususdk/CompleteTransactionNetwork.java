@@ -248,7 +248,7 @@ public class CompleteTransactionNetwork extends BottomSheetDialog {
 
                 // Save your string in SharedPref
                 editor.putString("TransactionInfonetwork", result);
-                editor.commit();
+                editor.apply();
                 Intent service = new Intent(getContext(), DusuPayTransaction.class);
                 service.putExtra("NetworkTransactionDetails", result);
                 getContext().startService(service);

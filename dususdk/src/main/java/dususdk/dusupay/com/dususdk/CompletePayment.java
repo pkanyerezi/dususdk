@@ -279,7 +279,7 @@ public class CompletePayment extends BottomSheetDialog {
 
                 // Save your string in SharedPref
                 editor.putString("TransactionInfo", result);
-                editor.commit();
+                editor.apply();
                 Intent service = new Intent(context, DusuPayTransaction.class);
                 // service.putExtra("TransactionDetails", result);
                 context.startService(service);

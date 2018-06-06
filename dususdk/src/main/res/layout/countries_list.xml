@@ -8,9 +8,9 @@
         android:id="@+id/logo"
         android:layout_width="300dp"
         android:layout_height="200dp"
-        android:layout_marginLeft="2px"
-        android:layout_marginRight="12px"
-        android:layout_marginTop="5px"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="5dp"
         android:background="@color/colorPrimary"
         android:src="@drawable/iconloaderxxx" >
     </ImageView>
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@+id/label"
-        android:textSize="30px" >
+        android:textSize="30dp" >
     </TextView>
 
 </LinearLayout>

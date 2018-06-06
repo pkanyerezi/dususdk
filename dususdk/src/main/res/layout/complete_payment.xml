@@ -25,7 +25,7 @@
             android:layout_weight="2"
             android:text="Transaction Details"
             android:textColor="#444"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold" />
  
         <TextView
@@ -35,7 +35,7 @@
             android:layout_weight="1"
             android:id="@+id/item_price_id"
             android:textStyle="bold"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:text="₹435.00"></TextView>
     </LinearLayout>
  
